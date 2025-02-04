@@ -9,7 +9,8 @@ elseif exists("b:current_syntax")
 endif
 
 syntax keyword ajsPrimType bool i32 str
-syntax keyword ajsKeyword as else func fn if import let module val
+syntax keyword ajsKeyword as do else func fn if import let module val when
+syntax keyword ajsOperator and not or
 
 syntax match ajsNumber /\<[0-9]\+\>/
 
@@ -18,6 +19,7 @@ syntax region ajsCommentLine start="//" end="$"
 
 highlight link ajsPrimType Type
 highlight link ajsKeyword Keyword
+highlight link ajsOperator Operator
 highlight link ajsNumber Number
 highlight link ajsString String
 highlight link ajsCommentLine Comment
