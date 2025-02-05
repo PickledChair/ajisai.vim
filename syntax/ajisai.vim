@@ -11,6 +11,7 @@ endif
 syntax keyword ajsPrimType bool i32 str
 syntax keyword ajsKeyword as do else func fn if import let module val when
 syntax keyword ajsOperator and not or
+syntax keyword ajsBoolean true false
 
 syntax match ajsNumber /\<[0-9]\+\>/
 
@@ -21,6 +22,7 @@ highlight link ajsPrimType Type
 highlight link ajsKeyword Keyword
 highlight link ajsOperator Operator
 highlight link ajsNumber Number
+highlight link ajsBoolean Boolean
 highlight link ajsString String
 highlight link ajsCommentLine Comment
 
