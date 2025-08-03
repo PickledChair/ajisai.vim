@@ -9,7 +9,7 @@ elseif exists("b:current_syntax")
 endif
 
 syntax keyword ajsPrimType bool i32 str
-syntax keyword ajsKeyword as do else func fn if import let module val when
+syntax keyword ajsKeyword as do else func fn if import let module struct val when
 syntax keyword ajsOperator and not or
 syntax keyword ajsBoolean true false
 
@@ -18,12 +18,13 @@ syntax match ajsNumber /\<[0-9]\+\>/
 syntax region ajsString start=/"/ skip=/\\"/ end=/"/
 syntax region ajsCommentLine start="//" end="$"
 
-highlight link ajsPrimType Type
-highlight link ajsKeyword Keyword
-highlight link ajsOperator Operator
-highlight link ajsNumber Number
-highlight link ajsBoolean Boolean
-highlight link ajsString String
-highlight link ajsCommentLine Comment
+highlight default link ajsPrimType Type
+highlight default link ajsKeyword Keyword
+highlight default link ajsOperator Operator
+highlight default link ajsNumber Number
+highlight default link ajsBoolean Boolean
+highlight default link ajsString String
+highlight default link ajsIdentifier Identifier
+highlight default link ajsCommentLine Comment
 
 let b:current_syntax = "ajisai"
